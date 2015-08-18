@@ -13,7 +13,6 @@ fi
 printf "%s\\n" "compiling eve editor ..."
 (cd Eve/ui && sudo tsc)
 
-#multirust seems to update no matter what, since it has already been installed, skip it
 printf "%s\\n" "updating rust if necessary ..."
 (cd Eve/runtime && sudo HOME=/home/vagrant multirust override nightly-2015-08-10) || {
     cat /tmp/multirust.log

@@ -1,10 +1,10 @@
 VAGRANTFILE_API_VERSION = '2'
 
 Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
-  config.vm.box = 'eve_precise32'
+  config.vm.box = 'chilicuil/eve-base'
   config.vm.network "forwarded_port", guest: 8080, host: 8080
   config.vm.network "forwarded_port", guest: 2794, host: 2794
-  #config.vm.box_url = 'http://files.vagrantup.com/precise32.box'
+  #config.vm.box_url = 'https://atlas.hashicorp.com/chilicuil/boxes/eve-base'
   config.vm.provision 'shell', path: 'eve_precise32_provision_partial.sh'
 
   #not idea why vagrant works without this in precise32.box
