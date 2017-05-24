@@ -11,7 +11,7 @@ Eve relies in a fair amount of software, in order to avoid trashing the main sys
 You will need [vagrant](https://www.vagrantup.com/) + [virtualbox](https://www.virtualbox.org/) to run this.
 
 ```
-git clone --depth=1 https://github.com/chilicuil/eve-vagrant
+git clone --depth=1 https://github.com/javier-lopez/eve-vagrant
 cd eve-vagrant
 vagrant up
 ```
@@ -23,7 +23,7 @@ After that opening [http://localhost:8080/editor](http://localhost:8080/editor) 
 The default recipe (above) uses an empty precise 32 box from which Eve and its dependencies are installed on every `vagrant up`. To reduce the time on this stage a partial recipe is provided which uses a modified precise box (583MB) with eve dependencies pre-installed to accelerate the process.
 
 ```
-git clone --depth=1 https://github.com/chilicuil/eve-vagrant
+git clone --depth=1 https://github.com/javier-lopez/eve-vagrant
 cd eve-vagrant/partial
 vagrant up
 ```
